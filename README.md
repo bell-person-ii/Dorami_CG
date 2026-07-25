@@ -9,7 +9,7 @@ OpenGL 고정 기능 파이프라인(immediate mode)과 GLU/GLUT 기본 도형�
 > 프로젝트 이름이 `MetaHuman_CG`이지만 Unreal MetaHuman과는 무관합니다.
 
 ## 실행화면
-<img width="800" height="763" alt="image" src="https://github.com/user-attachments/assets/90a8bf18-a139-470d-8f67-3dcb60c0b7cf" />
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/90a8bf18-a139-470d-8f67-3dcb60c0b7cf" />
 
 
 ## 주요 구현 내용
