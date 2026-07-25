@@ -1,0 +1,32 @@
+# Claude Code
+CLAUDE.md
+.claude/
+
+# Visual Studio 빌드 산출물
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio 사용자/캐시 파일
+.vs/
+*.vcxproj.user
+*.suo
+*.user
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.VC.opendb
+
+# 컴파일/링크 중간 파일
+*.obj
+*.pdb
+*.ilk
+*.idb
+*.exe
+*.log
+*.tlog
+*.lastbuildstate
+*.recipe
