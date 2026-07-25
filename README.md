@@ -70,21 +70,26 @@ Dorami_CG/
 ├─ MetaHuman_CG.vcxproj        프로젝트 설정 (freeglut 경로 포함)
 ├─ assets/
 │  └─ face_texture.bmp         얼굴 텍스처 (24-bit 비압축 BMP)
+├─ include/                    헤더 모음 (프로젝트 IncludePath에 등록됨)
+│  ├─ viewer.h
+│  ├─ dorami_model.h
+│  ├─ gl_util.h
+│  └─ bmp_texture.h
 └─ src/
    ├─ main.cpp
-   ├─ viewer.cpp / viewer.h
-   ├─ dorami_model.cpp / dorami_model.h
-   ├─ gl_util.cpp / gl_util.h
-   └─ bmp_texture.cpp / bmp_texture.h
+   ├─ viewer.cpp
+   ├─ dorami_model.cpp
+   ├─ gl_util.cpp
+   └─ bmp_texture.cpp
 ```
 
 | 파일 | 역할 |
 | --- | --- |
 | `src/main.cpp` | 진입점 — GLUT 초기화, 모듈 연결, 메인 루프, 리소스 정리 |
-| `src/viewer.h/.cpp` | 카메라·입력 상태, 전역 GL/조명 설정, GLUT 콜백 전체 |
-| `src/dorami_model.h/.cpp` | 캐릭터 팔레트 상수와 모든 파트 렌더러 |
-| `src/gl_util.h/.cpp` | 공용 헬퍼 — `col()`, 공유 quadric, `ScopedLightingOff` |
-| `src/bmp_texture.h/.cpp` | `loadBMP()` — 24-bit 비압축 BMP 전용 로더 |
+| `include/viewer.h` + `src/viewer.cpp` | 카메라·입력 상태, 전역 GL/조명 설정, GLUT 콜백 전체 |
+| `include/dorami_model.h` + `src/dorami_model.cpp` | 캐릭터 팔레트 상수와 모든 파트 렌더러 |
+| `include/gl_util.h` + `src/gl_util.cpp` | 공용 헬퍼 — `col()`, 공유 quadric, `ScopedLightingOff` |
+| `include/bmp_texture.h` + `src/bmp_texture.cpp` | `loadBMP()` — 24-bit 비압축 BMP 전용 로더 |
 
 렌더링은 신체 부위 기준으로 하향식 구성됩니다.
 

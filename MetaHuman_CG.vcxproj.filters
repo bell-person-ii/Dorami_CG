@@ -32,16 +32,16 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\gl_util.h">
+    <ClInclude Include="include\gl_util.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="src\bmp_texture.h">
+    <ClInclude Include="include\bmp_texture.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="src\dorami_model.h">
+    <ClInclude Include="include\dorami_model.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="src\viewer.h">
+    <ClInclude Include="include\viewer.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

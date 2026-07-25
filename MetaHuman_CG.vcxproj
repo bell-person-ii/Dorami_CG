@@ -71,19 +71,19 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\freeglut\include\GL;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)include;C:\freeglut\include\GL;$(IncludePath)</IncludePath>
     <LibraryPath>C:\freeglut\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>C:\freeglut\include\GL;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)include;C:\freeglut\include\GL;$(IncludePath)</IncludePath>
     <LibraryPath>C:\freeglut\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\freeglut\include\GL;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)include;C:\freeglut\include\GL;$(IncludePath)</IncludePath>
     <LibraryPath>C:\freeglut\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>C:\freeglut\include\GL;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)include;C:\freeglut\include\GL;$(IncludePath)</IncludePath>
     <LibraryPath>C:\freeglut\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -150,10 +150,10 @@
     <ClCompile Include="src\viewer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\bmp_texture.h" />
-    <ClInclude Include="src\dorami_model.h" />
-    <ClInclude Include="src\gl_util.h" />
-    <ClInclude Include="src\viewer.h" />
+    <ClInclude Include="include\bmp_texture.h" />
+    <ClInclude Include="include\dorami_model.h" />
+    <ClInclude Include="include\gl_util.h" />
+    <ClInclude Include="include\viewer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
