@@ -11,7 +11,7 @@
 #include "viewer.h"
 
 // 실행 작업 디렉터리 기준 상대 경로 (프로젝트 루트에서 실행해야 얼굴 텍스처가 적용된다)
-static const char* kFaceTexturePath = "face_texture.bmp";
+static const char* kFaceTexturePath = "assets/face_texture.bmp";
 
 /** @brief 창이 닫히는 시점(GL 컨텍스트 유효) 에 GPU 리소스 반환 */
 static void onWindowClose() {

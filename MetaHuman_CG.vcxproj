@@ -143,17 +143,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="bmp_texture.cpp" />
-    <ClCompile Include="dorami_model.cpp" />
-    <ClCompile Include="gl_util.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="viewer.cpp" />
+    <ClCompile Include="src\bmp_texture.cpp" />
+    <ClCompile Include="src\dorami_model.cpp" />
+    <ClCompile Include="src\gl_util.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\viewer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="bmp_texture.h" />
-    <ClInclude Include="dorami_model.h" />
-    <ClInclude Include="gl_util.h" />
-    <ClInclude Include="viewer.h" />
+    <ClInclude Include="src\bmp_texture.h" />
+    <ClInclude Include="src\dorami_model.h" />
+    <ClInclude Include="src\gl_util.h" />
+    <ClInclude Include="src\viewer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -47,8 +47,8 @@ msbuild MetaHuman_CG.sln /p:Configuration=Debug /p:Platform=x64
 
 ### 작업 디렉터리 주의
 
-`face_texture.bmp` 를 상대 경로로 읽습니다. 프로젝트 루트를 작업 디렉터리로 두고
-실행하지 않으면 얼굴 텍스처가 적용되지 않고 흰색으로 표시됩니다.
+얼굴 텍스처를 `assets/face_texture.bmp` 상대 경로로 읽습니다. 프로젝트 루트를
+작업 디렉터리로 두고 실행하지 않으면 텍스처가 적용되지 않고 흰색으로 표시됩니다.
 
 ## 조작법
 
@@ -62,15 +62,29 @@ msbuild MetaHuman_CG.sln /p:Configuration=Debug /p:Platform=x64
 
 줌은 카메라 거리 `2.5 ~ 15.0` 범위로 제한됩니다.
 
-## 소스 구성
+## 프로젝트 구조
+
+```
+Dorami_CG/
+├─ MetaHuman_CG.sln            솔루션
+├─ MetaHuman_CG.vcxproj        프로젝트 설정 (freeglut 경로 포함)
+├─ assets/
+│  └─ face_texture.bmp         얼굴 텍스처 (24-bit 비압축 BMP)
+└─ src/
+   ├─ main.cpp
+   ├─ viewer.cpp / viewer.h
+   ├─ dorami_model.cpp / dorami_model.h
+   ├─ gl_util.cpp / gl_util.h
+   └─ bmp_texture.cpp / bmp_texture.h
+```
 
 | 파일 | 역할 |
 | --- | --- |
-| `main.cpp` | 진입점 — GLUT 초기화, 모듈 연결, 메인 루프, 리소스 정리 |
-| `viewer.h/.cpp` | 카메라·입력 상태, 전역 GL/조명 설정, GLUT 콜백 전체 |
-| `dorami_model.h/.cpp` | 캐릭터 팔레트 상수와 모든 파트 렌더러 |
-| `gl_util.h/.cpp` | 공용 헬퍼 — `col()`, 공유 quadric, `ScopedLightingOff` |
-| `bmp_texture.h/.cpp` | `loadBMP()` — 24-bit 비압축 BMP 전용 로더 |
+| `src/main.cpp` | 진입점 — GLUT 초기화, 모듈 연결, 메인 루프, 리소스 정리 |
+| `src/viewer.h/.cpp` | 카메라·입력 상태, 전역 GL/조명 설정, GLUT 콜백 전체 |
+| `src/dorami_model.h/.cpp` | 캐릭터 팔레트 상수와 모든 파트 렌더러 |
+| `src/gl_util.h/.cpp` | 공용 헬퍼 — `col()`, 공유 quadric, `ScopedLightingOff` |
+| `src/bmp_texture.h/.cpp` | `loadBMP()` — 24-bit 비압축 BMP 전용 로더 |
 
 렌더링은 신체 부위 기준으로 하향식 구성됩니다.
 
